@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="/assets/css/base/jc_base.min.css">
-    <link rel="stylesheet" href="/assets/css/home/jc_home.min.css">
+    <link rel="stylesheet" href="/assets/css/jc_base.min.css">
+
+    {% if page.custom_css %}
+        {% for stylesheet in page.custom_css %}
+            <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
+        {% endfor %}
+    {% endif %}
 </head>
 
 <body>
@@ -22,16 +27,16 @@
             </div>
             <ul class="m-nav">
                 <li class="m-nav-item">
-                    <a href="#" class="m-nav-link">Home</a>
+                    <a href="{{ site.url }}" class="m-nav-link">Home</a>
                 </li>
                 <li class="m-nav-item">
-                    <a href="#" class="m-nav-link">Blog</a>
+                    <a href="{{ site.url }}/blog" class="m-nav-link">Blog</a>
                 </li>
                 <li class="m-nav-item">
-                    <a href="#" class="m-nav-link">Portfolio</a>
+                    <a href="{{ site.url }}/portfolio" class="m-nav-link">Portfolio</a>
                 </li>
                 <li class="m-nav-item">
-                    <a href="#" class="m-nav-link">About</a>
+                    <a href="{{ site.url }}/about" class="m-nav-link">About</a>
                 </li>
                 <li class="m-nav-item">
                     <a href="" class="m-nav-link">
@@ -56,7 +61,7 @@
         </div>
     </nav>
 
-    <main>
+    <main class="m-pt-8">
         {{ content }}
     </main>
 

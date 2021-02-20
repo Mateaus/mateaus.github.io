@@ -61,7 +61,7 @@ layout: base
     </div>
     <div class="m-footer-container">
         <div class="m-button-container">
-            <div class="m-button">Show More</div>
+            <a href="{{ site.url }}/blog" class="m-button" style="text-decoration: none;">Show More</a>
         </div>
     </div>
 </div>
@@ -110,7 +110,7 @@ layout: base
     </div>
     <div class="m-footer-container">
         <div class="m-button-container">
-            <div class="m-button">Show More</div>
+            <a href="{{ site.url }}/portfolio" class="m-button" style="text-decoration: none;">Show More</a>
         </div>
     </div>
 </div>
@@ -125,11 +125,11 @@ layout: base
     </div>
     <div class="m-body-container">
         <div class="m-form-container">
-            <form id="contact-form" action="#">
+            <form id="contact-form" action="https://formspree.io/f/mnqoylwv" method="POST">
                 <label for="name">What's your name?</label>
                 <input type="text" name="name">
                 <label for="email">and your email?</label>
-                <input type="text" name="email">
+                <input type="text" name="_replyto">
                 <label for="text">What's on your mind?</label>
                 <textarea name="subject" cols="30" rows="10"></textarea>
             </form>
@@ -137,7 +137,8 @@ layout: base
     </div>
     <div class="m-footer-container">
         <div class="m-button-container">
-            <div class="m-button">Submit Form</div>
+            <div id="contact-button" class="m-button">Submit Form</div>
+            <p id="my-form-status"></p>
         </div>
     </div>
 </div>

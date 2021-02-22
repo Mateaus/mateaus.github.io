@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-<div class="m-intro-grid">
+<div class="m-intro-grid m-ptb-17">
     <div class="m-center-container">
         <div class="m-intro-inf">
             <h1>HELLO, I'M JOSEPH.</h1>
@@ -9,7 +9,7 @@ layout: base
         </div>
     </div>
 </div>
-<div class="m-grid">
+<div class="m-grid m-pb-9">
     <div class="m-header-container">
         <div class="m-section-detail">
             <h4>Blog</h4>
@@ -21,7 +21,7 @@ layout: base
         <div class="m-card-list-v">
             <div class="m-card">
                 <div class="m-card-body">
-                    <a href="" class="m-card-title">New "Action Roguelike" C++ Project on Github</a>
+                    <a href="" class="m-card-title">New "Action Roguelike" C++ Projecton Github</a>
                     <p class="m-card-date">Created on Jan 22, 2021</p>
                 </div>
                 <div class="m-card-footer">
@@ -61,12 +61,12 @@ layout: base
     </div>
     <div class="m-footer-container">
         <div class="m-button-container">
-            <a href="{{ site.url }}/blog" class="m-button" style="text-decoration: none;">Show More</a>
+            <div class="m-button">Show More</div>
         </div>
     </div>
 </div>
 
-<div class="m-grid m-reverse-l">
+<div class="m-grid m-reverse-l m-ptb-9">
     <div class="m-header-container">
         <div class="m-section-detail">
             <h4>Portfolio</h4>
@@ -110,12 +110,12 @@ layout: base
     </div>
     <div class="m-footer-container">
         <div class="m-button-container">
-            <a href="{{ site.url }}/portfolio" class="m-button" style="text-decoration: none;">Show More</a>
+            <div class="m-button">Show More</div>
         </div>
     </div>
 </div>
 
-<div class="m-grid m-footer">
+<div class="m-grid m-ptb-9">
     <div class="m-header-container">
         <div class="m-section-detail">
             <h4>Contact</h4>
@@ -125,20 +125,19 @@ layout: base
     </div>
     <div class="m-body-container">
         <div class="m-form-container">
-            <form id="contact-form" action="https://formspree.io/f/mnqoylwv" method="POST">
+            <form id="contact-form" action="#">
                 <label for="name">What's your name?</label>
                 <input type="text" name="name">
                 <label for="email">and your email?</label>
-                <input type="email" name="_replyto">
-                <label for="text">What's on your mind?</label>
+                <input type="email" name="email">
+                <label for="text">What's in your mind?</label>
                 <textarea name="subject" cols="30" rows="10"></textarea>
             </form>
         </div>
     </div>
     <div class="m-footer-container">
         <div class="m-button-container">
-            <div id="contact-button" class="m-button">Submit Form</div>
-            <p id="my-form-status"></p>
+            <div class="m-button">Submit Form</div>
         </div>
     </div>
 </div>

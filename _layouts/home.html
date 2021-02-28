@@ -2,11 +2,9 @@
 layout: base
 ---
 <div class="m-intro-grid m-ptb-17">
-    <div class="m-center-container">
-        <div class="m-intro-inf">
-            <h1>HELLO, I'M JOSEPH.</h1>
-            <h4>A CS Graduate w/ a main focus on Software Engineering</h4>
-        </div>
+    <div class="m-intro-inf">
+        <h1>HELLO, I'M JOSEPH.</h1>
+        <h4>A CS Graduate w/ a main focus on Software Engineering</h4>
     </div>
 </div>
 <div class="m-grid m-pb-9">
@@ -19,44 +17,23 @@ layout: base
     </div>
     <div class="m-body-container">
         <div class="m-card-list-v">
-            <div class="m-card">
-                <div class="m-card-body">
-                    <a href="" class="m-card-title">New "Action Roguelike" C++ Projecton Github</a>
-                    <p class="m-card-date">Created on Jan 22, 2021</p>
-                </div>
-                <div class="m-card-footer">
-                    <div class="tags">
-                        <a href="">Kotlin</a>
-                        <a href="">Design</a>
-                    </div>
-                </div>
-            </div>
 
+            {% for post in site.posts limit:3 %}
             <div class="m-card">
                 <div class="m-card-body">
-                    <a href="" class="m-card-title">OOP refresher</a>
-                    <p class="m-card-date">Created on Jan 22, 2021</p>
+                    <a href="{{ post.url }}" class="m-card-title">{{ post.title }}</a>
+                    <p class="m-card-date">Created on {{ post.date | date: "%b %-d, %Y"}}</p>
                 </div>
                 <div class="m-card-footer">
                     <div class="tags">
-                        <a href="">Kotlin</a>
-                        <a href="">Design</a>
+                        {% for tag in post.tags %}
+                        <a href="">{{ tag }}</a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
+            {% endfor %}
 
-            <div class="m-card">
-                <div class="m-card-body">
-                    <a href="" class="m-card-title">Vision Computing and Python</a>
-                    <p class="m-card-date">Created on Jan 22, 2021</p>
-                </div>
-                <div class="m-card-footer">
-                    <div class="tags">
-                        <a href="">Kotlin</a>
-                        <a href="">Design</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <div class="m-footer-container">
@@ -76,36 +53,26 @@ layout: base
     </div>
     <div class="m-body-container">
         <div class="m-card-list-v m-list-reverse">
+
+            {% for project in site.projects limit:2 %}
             <div class="m-card">
                 <div class="m-card-header">
-                    <img src="src/img/img2.jpg" alt="">
+                    <img width="500" height="250" src="/assets/images/thumbnail/{{ project.image }}" alt="">
                 </div>
                 <div class="m-card-body">
-                    <a href="" class="m-card-title">Realtime Note Keeper</a>
-                    <p class="m-card-date">Created on Jan 22, 2021</p>
+                    <a href="{{ project.url }}" class="m-card-title">{{ project.title }}</a>
+                    <p class="m-card-date">Created on {{ project.date | date: "%b %-d, %Y" }}</p>
                 </div>
                 <div class="m-card-footer">
                     <div class="tags">
-                        <a href="">Kotlin</a>
-                        <a href="">Design</a>
+                        {% for tag in project.tags %}
+                        <a href="">{{ tag }}</a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-            <div class="m-card">
-                <div class="m-card-header">
-                    <img src="src/img/img2.jpg" alt="">
-                </div>
-                <div class="m-card-body">
-                    <a href="" class="m-card-title">Realtime Note Keeper</a>
-                    <p class="m-card-date">Created on Jan 22, 2021</p>
-                </div>
-                <div class="m-card-footer">
-                    <div class="tags">
-                        <a href="">Kotlin</a>
-                        <a href="">Design</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+
         </div>
     </div>
     <div class="m-footer-container">

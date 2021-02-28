@@ -14,6 +14,11 @@
             <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
         {% endfor %}
     {% endif %}
+    {% if layout.custom_css %}
+        {% for stylesheet in layout.custom_css %}
+            <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
+        {% endfor %}
+    {% endif %}
 </head>
 
 <body>
@@ -61,7 +66,7 @@
         </div>
     </nav>
 
-    <main class="m-ptb-8">
+    <main class="m-container m-ptb-8">
         {{ content }}
     </main>
 

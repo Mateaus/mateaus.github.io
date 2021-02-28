@@ -1,22 +1,20 @@
 ---
 layout: base
 ---
-<div class="m-intro-grid">
-    <div class="m-center-container">
-        <div class="m-intro-inf">
-            <h1>BLOG</h1>
-            <h4>Journey of Knowledge and Improvement</h4>
-        </div>
+<div class="m-intro-grid m-ptb-17">
+    <div class="m-intro-inf">
+        <h1>BLOG</h1>
+        <h4>Journey of Knowledge and Improvement</h4>
     </div>
 </div>
 
-<div class="m-card-grid">
+<div class="m-card-grid m-pb-8">
 
     {% for post in site.posts %}
     <div class="m-card">
         <div class="m-card-body">
             <a href="{{ post.url }}" class="m-card-title">{{ post.title }}</a>
-            <p class="m-card-date">Created on {{ post.date }}</p>
+            <p class="m-card-date">Created on {{ post.date | date: "%b %-d,  %Y"}}</p>
         </div>
         <div class="m-card-footer">
             <div class="tags">
